@@ -19,7 +19,7 @@ const fs = require('fs')
 
 let domain
 if (process.env.NODE_ENV == "production") {
-    domain = 'https://the-food-market.herokuapp.com:*'
+    domain = 'https://aipark-coding-challenge.herokuapp.com:*'
 } else {
     domain = 'localhost:8080'
 }
