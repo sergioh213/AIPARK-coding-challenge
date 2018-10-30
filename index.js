@@ -11,7 +11,7 @@ const csurf = require('csurf')
 const multer = require('multer');
 const uidSafe = require('uid-safe');
 const path = require('path');
-const s3 = require("./s3");
+// const s3 = require("./s3");
 const config = require("./config");
 const server = require('http').Server(app);
 const csv = require('csv-parser')
@@ -271,11 +271,11 @@ app.post("/filters.json", async (req, res) => {
 })
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 server.listen(process.env.PORT || 8080, function() {
