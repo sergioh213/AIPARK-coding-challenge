@@ -253,7 +253,7 @@ app.get('/data.json', function(req, res) {
             var listOfParkings = await processParkingData(parkingAreasids)
             await res.json({listOfUsers: listOfUsers, listOfParkings: listOfParkings})
         });
-});
+}); 
 
 app.post("/filters.json", async (req, res) => {
     const results = [];
